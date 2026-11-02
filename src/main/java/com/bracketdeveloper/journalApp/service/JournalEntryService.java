@@ -6,8 +6,9 @@ import java.util.List;
 import java.util.Optional;
 
 public interface JournalEntryService {
+    JournalEntry createJournal(JournalEntry journalEntry, String username);
     JournalEntry createJournal(JournalEntry journalEntry);
     List<JournalEntry> getAllJournals();
     Optional<JournalEntry> getJournalById(String journalId);
-    void deleteJournalById(String journalId);
+    void deleteJournalById(String journalId, String username);
 }
